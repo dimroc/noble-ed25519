@@ -764,7 +764,7 @@ const crypto: { node?: any; web?: any } = (() => {
   const webCrypto = typeof self === 'object' && 'crypto' in self ? self.crypto : undefined;
   const nodeRequire = typeof module !== 'undefined' && typeof require === 'function';
   return {
-    node: nodeRequire && !webCrypto ? require('crypto') : undefined,
+    node: undefined,
     web: webCrypto,
   };
 })();
