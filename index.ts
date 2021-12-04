@@ -762,7 +762,6 @@ Point.BASE._setWindowSize(8);
 declare const self: Record<string, any> | undefined;
 const crypto: { node?: any; web?: any } = (() => {
   const webCrypto = typeof self === 'object' && 'crypto' in self ? self.crypto : undefined;
-  const nodeRequire = typeof module !== 'undefined' && typeof require === 'function';
   return {
     node: undefined,
     web: webCrypto,
